@@ -1,62 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/black"/>
-        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="150dp"
+        android:layout_weight="2"
+        android:padding="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/answ"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:maxLines="2"
+            android:text="HOLA"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@id/rest"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/rest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="hola"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomof="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:padding="20dp"/>
+            android:contentDescription="Hola"
+            android:hint="e.g 5"></TextView>
 
-                <TextView
-                    android:id="@+id/display"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="hola"
-                    app:layout_constraintBottom_toTopOf="@id/mul"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:lines="2"
-                    android:maxLines="2"
-                    android:textSize="25sp"
-                    android:textAlignment="textEnd"
-                    />
-                <TextView
-                    android:id="@+id/mul"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:lines="1"
-                    android:maxLines="2"
-                    android:textColor="@color/white"
-                    android:textAlignment="textEnd"
-                    android:textSize="40dp"
-                    />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight ="1"
-        
-        />
+        android:id="@+id/linearLayout2"
+        style="@style/Boton">
+
+        <Button
+            style="@style/Botonnumero"
+            android:text="AC"
+            android:textColor="@color/material_dynamic_tertiary99"
+            android:onClick="allclearact">
+
+        </Button>
+
+        <Button
+            style="@style/Botonnumero"
+            android:text="◄"
+            android:onClick="backact"
+           >
+
+        </Button>
+
+        <Button
+            style="@style/Botonnumero"
+            android:text=""
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </Button>
+        <Button
+            style="@style/operador"
+            android:text="/"
+            android:onClick="operation"
+            >
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        style="@style/Boton">
+
+        <Button
+            style="@style/Botonnumero"
+            android:text="7">
+
+        </Button>
+
+        <Button
+            style="@style/Botonnumero"
+            android:text="8"
+            >
+
+        </Button>
+        <Button
+            style="@style/Botonnumero"
+            android:text="9">
+
+        </Button>
+        <Button
+            style="@style/operador"
+            android:text="X"
+            android:onClick="operation"
+            >
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        style="@style/Boton">
+
+        <Button
+            style="@style/Botonnumero"
+            android:text="4">
+
+        </Button>
+
+        <Button
+            style="@style/Botonnumero"
+            android:text="5"
+            >
+
+        </Button>
+        <Button
+            style="@style/Botonnumero"
+            android:text="6">
+
+        </Button>
+        <Button
+            style="@style/operador"
+            android:text="-"
+            android:onClick="operation"
+            >
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        style="@style/Boton">
+
+        <Button
+            style="@style/Botonnumero"
+            android:text="1">
+
+        </Button>
+
+        <Button
+            style="@style/Botonnumero"
+            android:text="2"
+            >
+
+        </Button>
+        <Button
+            style="@style/Botonnumero"
+            android:text="3">
+
+        </Button>
+        <Button
+            style="@style/operador"
+            android:text="+"
+            android:onClick="operation"
+            >
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        style="@style/Boton">
+
+        <Button
+            style="@style/Botonnumero"
+            android:text="."
+            >
+
+        </Button>
+        <Button
+            style="@style/Botonnumero"
+            android:text="0">
+
+        </Button>
+        <Button
+            style="@style/operador"
+            android:text="="
+            android:onClick="ecualstoact"
+            >
+
+        </Button>
+    </LinearLayout>
 
 
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
