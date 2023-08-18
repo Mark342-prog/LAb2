@@ -12,7 +12,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="0dp"
         android:layout_weight="2"
         android:padding="8dp"
         app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
@@ -45,13 +45,13 @@
             android:textAlignment="textEnd"
             android:textColor="@color/white"
             android:textSize="35sp"
-            app:layout_constraintBottom_toBottomof="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:contentDescription="Hola"
-            android:hint="e.g 5"></TextView>
+            android:hint="e.g 5"
+            tools:ignore="ContentDescription"></TextView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -61,31 +61,34 @@
 
         <Button
             style="@style/Botonnumero"
+            android:onClick="allclearact"
             android:text="AC"
             android:textColor="@color/material_dynamic_tertiary99"
-            android:onClick="allclearact">
+            tools:ignore="TextSizeCheck,TextSizeCheck,VisualLintButtonSize">
 
         </Button>
 
         <Button
             style="@style/Botonnumero"
-            android:text="◄"
             android:onClick="backact"
-           >
+            android:text="◄"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
 
         <Button
             style="@style/Botonnumero"
             android:text=""
-            tools:ignore="SpeakableTextPresentCheck">
+            tools:ignore="SpeakableTextPresentCheck,VisualLintButtonSize">
 
         </Button>
+
         <Button
             style="@style/operador"
-            android:text="/"
             android:onClick="operation"
-            >
+            android:text="/"
+            android:textColor="#000000"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
     </LinearLayout>
@@ -95,26 +98,31 @@
 
         <Button
             style="@style/Botonnumero"
-            android:text="7">
+            android:text="7"
+            tools:ignore="TextSizeCheck,TextSizeCheck,VisualLintButtonSize">
 
         </Button>
 
         <Button
             style="@style/Botonnumero"
             android:text="8"
-            >
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
+
         <Button
             style="@style/Botonnumero"
-            android:text="9">
+            android:text="9"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
+
         <Button
             style="@style/operador"
-            android:text="X"
             android:onClick="operation"
-            >
+            android:text="X"
+            android:textColor="#000000"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
     </LinearLayout>
@@ -124,26 +132,31 @@
 
         <Button
             style="@style/Botonnumero"
-            android:text="4">
+            android:text="4"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
 
         <Button
             style="@style/Botonnumero"
             android:text="5"
-            >
+            tools:ignore="TextSizeCheck,TextSizeCheck,VisualLintButtonSize">
 
         </Button>
+
         <Button
             style="@style/Botonnumero"
-            android:text="6">
+            android:text="6"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
+
         <Button
             style="@style/operador"
-            android:text="-"
             android:onClick="operation"
-            >
+            android:text="-"
+            android:textColor="#000000"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
     </LinearLayout>
@@ -153,26 +166,31 @@
 
         <Button
             style="@style/Botonnumero"
-            android:text="1">
+            android:text="1"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
 
         <Button
             style="@style/Botonnumero"
             android:text="2"
-            >
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
+
         <Button
             style="@style/Botonnumero"
-            android:text="3">
+            android:text="3"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
+
         <Button
             style="@style/operador"
-            android:text="+"
             android:onClick="operation"
-            >
+            android:text="+"
+            android:textColor="#000000"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
     </LinearLayout>
@@ -183,19 +201,23 @@
         <Button
             style="@style/Botonnumero"
             android:text="."
-            >
+            tools:ignore="TextSizeCheck,TextSizeCheck,VisualLintButtonSize">
 
         </Button>
+
         <Button
             style="@style/Botonnumero"
-            android:text="0">
+            android:text="0"
+            tools:ignore="TextSizeCheck,TextSizeCheck,VisualLintButtonSize">
 
         </Button>
+
         <Button
             style="@style/operador"
-            android:text="="
             android:onClick="ecualstoact"
-            >
+            android:text="="
+            android:textColor="#000000"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize">
 
         </Button>
     </LinearLayout>
